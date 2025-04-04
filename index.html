@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wanderly - Travel Inspiration Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      background: rgba(30, 61, 89, 0.9);
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+
+    .section > * {
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p, li {
+      max-width: 800px;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features, .testimonials {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card, .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 300px;
+      color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transform: scale(0.95);
+      transition: all 0.4s ease;
+    }
+
+    .card:hover, .testimonial-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .testimonial-card {
+      border-left: 5px solid #fff;
+      max-width: 500px;
+    }
+
+    #home {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+
+    #about {
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+    }
+
+    #destinations {
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+    }
+
+    #blog {
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+    }
+
+    #team {
+      background: linear-gradient(135deg, #7f00ff, #e100ff);
+    }
+
+    #contact {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+
+    a {
+      color: #ffeaa7;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#blog">Blog</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div id="home" class="section">
+    <h1>Welcome to Wanderly</h1>
+    <p>Fuel your wanderlust. Discover stunning destinations, real travel stories, and handy tips to help you explore the world with ease and confidence.</p>
+  </div>
+
+  <div id="about" class="section">
+    <h1>About Wanderly</h1>
+    <p>Wanderly started with a dream — to inspire and guide travelers in finding beautiful experiences worldwide. From hidden waterfalls to bustling city escapes, we make discovering your next adventure fun and easy.</p>
+    <div class="features">
+      <div class="card">
+        <h3>Interactive Maps</h3>
+        <p>Explore places with detailed guides, maps, and suggested itineraries.</p>
+      </div>
+      <div class="card">
+        <h3>Budget Planning</h3>
+        <p>Get customized travel budgets and save smartly on your next trip.</p>
+      </div>
+      <div class="card">
+        <h3>Real Reviews</h3>
+        <p>Read honest experiences from thousands of fellow travelers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="destinations" class="section">
+    <h1>Top Travel Destinations</h1>
+    <p>Check out our current most-loved travel spots across the globe.</p>
+    <ul style="font-size: 18px;">
+      <li><strong>Bali, Indonesia:</strong> Serene beaches, culture, and nature vibes.</li>
+      <li><strong>Kyoto, Japan:</strong> A spiritual blend of temples, gardens, and cherry blossoms.</li>
+      <li><strong>Reykjavik, Iceland:</strong> Hot springs, glaciers, and northern lights.</li>
+      <li><strong>Machu Picchu, Peru:</strong> A stunning trek to ancient civilization.</li>
+      <li><strong>Amalfi Coast, Italy:</strong> Sun-soaked cliffs and coastal beauty.</li>
+    </ul>
+  </div>
+
+  <div id="blog" class="section">
+    <h1>Wanderly Blog</h1>
+    <p>Our blog shares traveler stories, insider guides, and tips to get the most out of every journey.</p>
+    <div class="features">
+      <div class="card">
+        <h3>Solo Travel Tips</h3>
+        <p>How to stay safe, pack smart, and enjoy solo adventures without fear.</p>
+      </div>
+      <div class="card">
+        <h3>Top 10 Travel Hacks</h3>
+        <p>Discover time-saving, money-saving, and sanity-saving tips from experts.</p>
+      </div>
+      <div class="card">
+        <h3>Local Cuisine Guides</h3>
+        <p>Must-try dishes and hidden food gems around the world.</p>
+      </div>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>"Wanderly helped me plan my dream backpacking trip across Europe. The guides were spot on!"</p>
+        <p><strong>- Priya M, Traveler</strong></p>
+      </div>
+      <div class="testimonial-card">
+        <p>"I found my favorite travel blog on Wanderly. Super helpful for first-time solo trips."</p>
+        <p><strong>- Ethan J, Travel Enthusiast</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="team" class="section">
+    <h1>Meet the Team</h1>
+    <p>We’re a diverse group of travelers, storytellers, developers, and creatives united by one thing — the love for exploration.</p>
+    <ul style="font-size: 18px;">
+      <li><strong>Mowni -</strong> Founder & Chief Explorer</li>
+      <li><strong>Mimu -</strong> Developer & Map Geek</li>
+      <li><strong>Doraemon -</strong> Writer & Cultural Curator</li>
+      <li><strong>Oreo -</strong> Photographer & Visual Storyteller</li>
+      <li><strong>Charlie -</strong> Service provider</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="section">
+    <h1>Get in Touch</h1>
+    <p>Questions, collaborations, or just want to say hi?</p>
+    <p>Email us: hello@wanderly.com</p>
+    <p>Follow us on Instagram: <a href="#">@wanderly.world</a></p>
+    <p>Let’s explore the world, one story at a time.</p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
